@@ -17,7 +17,7 @@ namespace API.Persistence.Configurations
 
             builder.HasOne(p => p.Product)
                 .WithMany(pc => pc.ProductCategories)
-                .HasForeignKey(p => p.ProductId).OnDelete(DeleteBehavior.Cascade); //silinme durumunda onunla alakalı tüm bağlantıların silinmesi için cascade kullanıldı
+                .HasForeignKey(p => p.ProductId).OnDelete(DeleteBehavior.Cascade); //silinme durumunda onunla alakalı tüm bağlantıların silinmesi için cascade kullanıldı//
 
             builder.HasOne(c => c.Category)
                 .WithMany(pc => pc.ProductCategories)
